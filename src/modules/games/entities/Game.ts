@@ -2,6 +2,7 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinTable,
   ManyToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -17,7 +18,7 @@ export class Game {
   @Column()
   title: string;
 
-  @ManyToMany(() => User, (user) => user.games)
+  @ManyToMany(() => User, (user) => user.games)  
   users: User[];
 
   @CreateDateColumn()

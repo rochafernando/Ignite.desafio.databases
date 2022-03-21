@@ -5,7 +5,10 @@
   "license": "MIT",
   "scripts": {
     "lint:fix": "eslint --fix src --ext ts,tsx",
-    "test": "jest"
+    "test": "jest",
+    "test:debug": "jest --runInBand",
+    "typeorm": "ts-node ./node_modules/typeorm/cli",
+    "dev": "ts-node src/main.ts"
   },
   "devDependencies": {
     "@types/jest": "^26.0.21",
